@@ -1,0 +1,262 @@
+*::before,
+*::after,
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh; 
+   font-family: "Alan Sans", sans-serif;
+   line-height: 1.5;
+}
+
+
+header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 10px 15px;
+   background-color: crimson;
+   color: #fff; 
+   position: sticky;
+   top: 0;
+   z-index: 5;
+   width: 100%;
+}
+
+
+header > h1 {
+   display: flex;
+   align-items: center;
+   gap: 5px; 
+   font-size: 2.1rem;
+}
+
+
+nav {
+   position: fixed; 
+   top: 70px;
+   right: 0;
+   z-index: 10;
+   width: 250px;
+   height: 230px;
+   border-bottom-left-radius: 100px;
+   background-color: crimson;
+   padding: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   transform: translateX(100%);
+   opacity: 0;
+   visibility: hidden;
+   transition: all 0.3s ease;
+}
+
+
+nav.active {
+   transform: translateX(0);
+   visibility: visible; 
+   opacity: 1;
+}
+
+
+nav > ul {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 30px;
+   list-style: none; 
+}
+
+nav > ul > li {
+   font-size: 1.3rem;
+   cursor: pointer;
+}
+
+
+.bar {
+   font-size: 2rem; 
+   cursor: pointer;
+}
+
+
+#content {
+   flex: 1;
+   position: relative; 
+}
+
+
+
+footer {
+   height: 450px;
+   padding: 5px 15px;
+   background-color: crimson;
+   color: #fff; 
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   width: 100%;
+}
+
+
+footer > .footer-contact-section {
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+}
+
+
+.footer-contact-section > h1 {
+   margin-top: 20px;
+   font-size: 2.1rem;
+}
+
+
+.footer-contact-section > .contact-address > p {
+   font-size: 1.2rem;
+}
+
+
+
+.footer-contact-section > .contact-address > p:first-child {
+   margin-bottom: 4px;
+}
+
+
+
+.footer-contact-section > .socials {
+   display: flex;
+}
+
+
+.footer-contact-section > .socials > i {
+   border: 2px solid #fff;
+   box-shadow: 0 0 2px 2px #c37272;
+   border-radius: 50%;
+   font-size: 1.3rem;
+   width: 45px;
+   height: 45px;
+   margin-right: 15px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+
+.footer-contact-section > .socials > i:hover {
+   background-color: #fff;
+   color: crimson;
+}
+
+
+footer > p {
+   margin: 0 auto;
+}
+
+
+
+
+@media screen and (min-width: 768px) {
+   header {
+      padding: 20px;
+   }
+
+
+   header > h1 {
+      gap: 7px; 
+      font-size: 2.6rem;
+   }
+
+
+   nav {
+      position: unset; 
+      top: unset;
+      right: unset;
+      z-index: unset;
+      width: unset;
+      height: unset;
+      padding: unset;
+      display: flex;
+      justify-content: unset;
+      align-items: unset;
+
+      transform: translateX(0);
+      opacity: 1;
+      visibility: unset;
+      transition: unset;
+   }
+
+
+
+   nav > ul {
+      flex-direction: row;
+      align-items: center;
+      gap: 40px;
+   }
+
+   nav > ul > li {
+      font-size: 1.5rem;
+      cursor: pointer;
+   }
+
+
+   .bar {
+      display: none;
+   }
+
+
+   footer {
+      height: 400px;
+      padding: 5px 20px;
+   }
+
+
+   .footer-contact-section > h1 {
+      margin-top: 25px;
+      font-size: 2.4rem;
+   }
+
+
+   .footer-contact-section > .contact-address > p {
+      font-size: 1.3rem;
+   }
+
+
+   .footer-contact-section > .contact-address > p:first-child {
+      margin-bottom: 5px;
+   }
+
+
+
+   .footer-contact-section > .socials > i {
+      font-size: 1.6rem;
+      width: 60px;
+      height: 60px;
+      margin-right: 17px;
+   }
+
+
+
+   footer > p {
+      margin: 0 auto;
+      font-size: 1.1rem;
+   }
+
+
+}
+
+
+@media screen and (min-width: 1280px) {
+    header {
+      padding: 17px 15px;
+   }
+
+} 
